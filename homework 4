@@ -28,3 +28,20 @@ return base * pow (base, n-1);
  
  const result = pow (2,3);
 console.log(result);
+
+//5.
+const checkerBoard = function(n) {
+    const vertical = function(str, n){
+      if (n < 1) {
+        return;
+      }
+      if (n%2 === 0) {
+        console.log(str);
+      } else {
+        console.log(" " + str);
+      }
+      vertical(str, n-1);
+    };
+    vertical(repeat("* ", n), n);
+};
+
