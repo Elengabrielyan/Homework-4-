@@ -1,0 +1,30 @@
+
+
+//4.
+const reverse = function(str){
+  const help = function(s, n){
+    if(n === 0){
+      return s[0];
+    } else 
+    return s[n] + help(s, n-1);
+  };
+ console.log(help(str, str.length-1));
+};
+reverse("Elen");
+
+//3.
+const pow = function(base, n)
+ {if (n === 0)
+ return 1;
+ else if (n === 1) 
+ return base;
+ else if (base >= 1 && n>1) {
+return base * pow (base, n-1);
+   }
+   else {
+     return 'SORRYNOTSORRY';
+   }
+ };
+ 
+ const result = pow (2,3);
+console.log(result);
